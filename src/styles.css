@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root {
+    --color-main:#1976d2;
+    --color-secondary: #4baedb;
+    --color-dark: #002b58;
+    --color-bright: #cde6ff;
+    --color-bg: #e2e2e2;
+    --color-alert: #d62727;
+}
+
+body {
+    margin-left: 0;
+    padding: 0;
+}
+
+.toolbar {
+    height: 60px;
+    margin: -8px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-main);
+    color: white;
+    font-weight: 600;
+}
+
+.main_title {
+    font-size: x-large;
+    font-family: 'Indie Flower', cursive;
+}
+
+.btn-sandwitch {
+    fill: var(--color-dark);
+    transition: 200ms ease;
+}
+
+.btn-sandwitch:hover{
+    fill: var(--color-bright);
+}
+
+/*============== Side menu ================*/
+
+.side-menu{
+    position: fixed;
+    height: 100vh;
+    background-color: var(--color-main);
+    transition: 200ms ease-in-out;
+}
+
+/*================ Buttons ===============*/
+
+.btn-row {
+    margin: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-btn{
+    border: none;
+    background: var(--color-main);
+    padding: 1.25rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*============= Page content ============*/
+
+.page-content {
+    margin: 2rem 5rem;
+    background-color: var(--color-bg);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+}
+
+.page-content p {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.page-content h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.text-alert {
+    color: var(--color-alert);
+}
