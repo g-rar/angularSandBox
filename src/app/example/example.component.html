@@ -1,0 +1,37 @@
+<div class="page-content">
+    <h1>Componente de ejemplos:</h1>
+    <p>La idea es que aquí puedan ver el uso de algunas propiedades en código.</p>
+
+    <h2>Palindromo</h2>
+    <input type="text" [value]="inputValue" (input)="onInput($event.target.value)"/> {{resultado}}
+
+    <h2>Ejemplo de un form</h2>
+    <!--  -->
+    <form [formGroup]="exampleForm" (ngSubmit)="submitExampleForm(exampleForm.value)">
+        <label>Primer campo del form:</label>
+        <input formControlName="primerCampoDelForm" type="text">
+        <label>Segundo campo del form:</label>
+        <input formControlName="segundoCampoDelForm" type="text">
+        <button class="main-btn btn-small" type="submit">Mostrar campos</button>
+    </form>
+    <p>Campo1: {{campo1}}</p>
+    <p>Campo2: {{campo2}}</p>
+
+    <h2>Ejemplo de ngFor</h2>
+    <p>
+        Al usar *ngFor como atributo de un elemento, se va a repetir ese elemento como en un forLoop. 
+        Todo el contenido dentro de dicha etiqueta se va a repetir del mismo modo. Una utilidad es por ejemplo,
+        si se tiene un array de elementos y se quieren mostrar las propiedades de cada elemento en una tabla.
+
+    </p>
+    <p>
+        Por ejemplo: ‹tr *ngFor="let elem of listaEjemplo"› ...inserte aqui mas html... ‹/tr›
+    </p>
+    <p>
+        Si se fijan en el componente, tambien se puede usar para spammear a lo loco xD
+    </p>
+    <p>
+        <span *ngFor="let item of spamList" >SPAM{{item}}</span>
+    </p>
+
+</div>

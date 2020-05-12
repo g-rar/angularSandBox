@@ -10,10 +10,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger(
       'openCloseSideMenu', [
         state('closed', style({
-          width: '0px',
+          'margin-left': '-80rem',
         })),
         state('open', style({
-          width: '200px'
+          'margin-left': "0",
         })),
         transition('open => closed', [animate('0.2s')]),
         transition('closed => open', [animate('0.2s')])
