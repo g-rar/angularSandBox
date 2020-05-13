@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AppComponent,
     MainComponent,
     NotFoundComponent,
-    ExampleComponent
+    ExampleComponent,
+    GabycpComponent
   ],
   imports: [
     BrowserModule,
