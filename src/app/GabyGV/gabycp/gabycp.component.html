@@ -1,1 +1,47 @@
-<p>gabycp works!</p>
+
+<div class = "page-background">
+<div class="page-tittle" style="text-align: center;">
+    <h1 style="color: white;">GabyGV</h1>
+</div>
+<br>
+<div style="text-align: center;">
+    <ul style="color: #3bd4d4; list-style: inside;">
+        <li>
+            Componente 1
+        </li>
+        <li>
+            Creado: 5/13/2020
+        </li>
+        <li>
+            Última modificación: 5/13/2020 - 4:30pm 
+        </li>
+    </ul>
+
+</div>
+    
+<br>
+
+
+<div class="page-content">
+    <h1 style="color: #3bd4d4;">Palíndromo</h1>
+    <input type="text" [value]="inputValue"/>
+    <button onclick="onInput($event.target.value)">Verificar</button>
+    <p>{{resultado}}</p>
+
+</div>
+
+<div class="page-content">
+    <h1 style="color: #3bd4d4;">Formulario</h1>
+    <form [formGroup]="exampleForm" (ngSubmit)="submitExampleForm(exampleForm.value)">
+        <label>Primer campo del form:</label>
+        <input formControlName="primerCampoDelForm" type="text">
+        <label>Segundo campo del form:</label>
+        <input formControlName="segundoCampoDelForm" type="text">
+        <button class="main-btn btn-small" type="submit">Mostrar campos</button>
+    </form>
+    <p>Campo1: {{campo1}}</p>
+    <p>Campo2: {{campo2}}</p>
+    
+</div>
+<br>
+</div>
