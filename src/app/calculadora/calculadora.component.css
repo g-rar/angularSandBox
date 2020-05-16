@@ -8,7 +8,13 @@
   width: 90%;
   display: run-in;
   border: solid;
+  font-family: 'LCD14';
+  font-weight: normal;
+  font-style: normal;
   border-color: black;
+  font-size: 100%;
+  text-shadow: 2px 2px #A9AB94;
+  background: #DBDEC4;
 }
 
 #equals-button{
