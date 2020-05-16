@@ -1,27 +1,40 @@
 <h1>Calculadora</h1>
 <div class="calculator-display">
-  <input type="text" id="display">
+  <input type="text" id="display" [(ngModel)] ="displayText">
   <button type="button" id="equals-button">=</button>
 </div>
-<div  id="keyboard">
-    <table >
+<div id="operations-container">
+  <table class="keyboard">
+    <tr>
+      <td class="keyboard-column" > <button type="button" class= "keyboard-button" (click)="keyPressed(' + ')">+</button></td>
+      <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed(' - ')">-</button></td>
+      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed(' * ')">*</button></td>
+      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed(' / ')">/</button></td>
+    </tr>
+  </table>
+
+</div>
+
+<div  id="keyboard-container">
+    <table class="keyboard">
       <tr>
-        <td> <button type="button" name="button" class= "keyboard-button">1</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">2</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">3</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('1')">1</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('2')">2</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button"(click)="keyPressed('3')">3</button></td>
       </tr>
       <tr>
-        <td> <button type="button" name="button" class= "keyboard-button">4</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">5</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">6</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('4')">4</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('5')">5</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('6')">6</button></td>
       </tr>
       <tr>
-        <td> <button type="button" name="button" class= "keyboard-button">7</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">8</button></td>
-        <td> <button type="button" name="button" class= "keyboard-button">9</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('7')">7</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('8')">8</button></td>
+        <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('9')">9</button></td>
       </tr>
       <tr>
-       <button type="button" name="button" class= "keyboard-button">0</button>
+        <td colspan="3"><button type="button" name="button" class= "keyboard-button" (click)="keyPressed('0')">0</button></td>
+
       </tr>
 
     </table>

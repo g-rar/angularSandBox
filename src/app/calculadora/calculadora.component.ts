@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit {
 
-  constructor() { }
+  private displayText :displayText;
+  constructor() {
+    this.displayText = '';
+   }
+
+  private keyPressed(key){
+    this.displayText += key;
+  }
 
   ngOnInit() {
   }
-
 }
