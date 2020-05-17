@@ -1,16 +1,16 @@
 <h1>Calculadora</h1>
 <div class="calculator-display">
-  <input type="text" id="display" [(ngModel)] ="displayText">
+  <input type="text" id="display" [(ngModel)] ="displayText" readonly>
   <button type="button" id="equals-button" class= "keyboard-button" (click)="calculate();">=</button>
 </div>
 
 <div id="operations-container">
   <table class="keyboard">
     <tr>
-      <td class="keyboard-column" > <button type="button" class= "keyboard-button" (click)="keyPressed(' + ');">+</button></td>
-      <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed(' - ');">-</button></td>
-      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed(' * ');">*</button></td>
-      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed(' / ');">/</button></td>
+      <td class="keyboard-column" > <button type="button" class= "keyboard-button" (click)="keyPressed('+');">+</button></td>
+      <td class="keyboard-column"> <button type="button" class= "keyboard-button" (click)="keyPressed('-');">-</button></td>
+      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed('*');">*</button></td>
+      <td class="keyboard-column"> <button type="button"  class= "keyboard-button" (click)="keyPressed('/');">/</button></td>
     </tr>
   </table>
 
@@ -37,7 +37,7 @@
         <td class="keyboard-column"> <button type="button" class= "keyboard-button"(click)="del();">DEL</button></td>
       </tr>
       <tr>
-        <td colspan="3"><button type="button" name="button" class= "keyboard-button" (click)="keyPressed('0');">0</button></td>
+        <td colspan="3"><button type="button" class= "keyboard-button" (click)="keyPressed('0');">0</button></td>
         <td class="keyboard-column"> <button type="button" class= "keyboard-button"(click)="ac();">AC</button></td>
       </tr>
 
