@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "comSandBox"
+    }
+  },
+  "defaultProject": "comSandBox",
+  "cli": {
+    "analytics": "a2425994-f62e-4117-a757-3da83912f28c"
+  }
 }

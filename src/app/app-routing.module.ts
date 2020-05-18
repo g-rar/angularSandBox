@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ExampleComponent } from './example/example.component';
-
+import { NataliaComponent } from './natalia/natalia.component';
 
 const routes: Routes = [
   {path: '', component:MainComponent},
   {path: 'example', component:ExampleComponent},
+  {path: 'natalia', component:NataliaComponent},
   {path: '**', component:NotFoundComponent}
+  
 ];
 
 @NgModule({
