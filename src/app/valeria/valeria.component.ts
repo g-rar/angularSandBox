@@ -9,10 +9,11 @@ export class ValeriaComponent implements OnInit {
   //Titulo
   tittles: "Practica de mis Componentes";
   isCollapsed:boolean = true;
+  inputText:string = "";
 
   constructor() {
   }
-  
+
   buttonCollapse(){
     this.isCollapsed = !this.isCollapsed;
   }

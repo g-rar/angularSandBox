@@ -1,9 +1,12 @@
 <div class="valesClass">
     <h1 class="title">Esta es mi sección de práctica</h1>
-    <button *ngIf = "isCollapsed" (click)="buttonCollapse()">Ver primera práctica</button>
-    <button *ngIf = "!isCollapsed" (click)="buttonCollapse()">Ocultar primera práctica</button>
+    <p>Ingrese su nombre:</p>
+    <input type = "text" [(ngModel)]="inputText"> 
+    <p>Bienvenid@ {{inputText}}</p>
+    <p> </p>
+    <button *ngIf = "isCollapsed" (click)="buttonCollapse()">Ver calculadora</button>
+    <button *ngIf = "!isCollapsed" (click)="buttonCollapse()">Ocultar calculadora</button>
     <div *ngIf = "!isCollapsed">
         <h1 class="subT">Primera practica: </h1>
-        <p>Digite su nombre</p>
     </div>
 </div>
