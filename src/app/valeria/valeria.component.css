@@ -1,0 +1,23 @@
+.valesClass{
+    border: 1px;
+    padding: 20px;
+}
+
+.practice1{
+    border: 0.5px;
+    padding: 20px;
+}
+
+.title{
+    font-family: "Verdana", cursive;
+    color: plum;
+    font-size: 30px;
+}
+
+.subT{
+    border-left: 15px;
+    font-family: "Verdana", cursive;
+    color: pink;
+    font-size: 20px;
+}
+

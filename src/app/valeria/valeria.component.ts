@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ValeriaComponent implements OnInit {
   //Titulo
   tittles: "Practica de mis Componentes";
+  isCollapsed:boolean = true;
 
   constructor() {
+  }
+  
+  buttonCollapse(){
+    this.isCollapsed = !this.isCollapsed;
   }
   ngOnInit() {
   }

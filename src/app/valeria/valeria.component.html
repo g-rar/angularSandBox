@@ -1,3 +1,9 @@
-<div class="page-content">
-    <h1>Esta es mi sección de práctica</h1>
+<div class="valesClass">
+    <h1 class="title">Esta es mi sección de práctica</h1>
+    <button *ngIf = "isCollapsed" (click)="buttonCollapse()">Ver primera práctica</button>
+    <button *ngIf = "!isCollapsed" (click)="buttonCollapse()">Ocultar primera práctica</button>
+    <div *ngIf = "!isCollapsed">
+        <h1 class="subT">Primera practica: </h1>
+        <p>Digite su nombre</p>
+    </div>
 </div>
