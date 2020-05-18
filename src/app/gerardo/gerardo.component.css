@@ -1,7 +1,27 @@
+::ng-deep :root {
+    --color-gmain: #0116d1;
+    --color-gsecondary: #02eeff;
+    --color-gtext-bright: #eeeeee;
+    --color-gtext-dark: #292929;
+}
+
 .page-background {
-    --color-gmain: #32d101;
-    --color-gsecondary: #d6e600;
     z-index: -1;
     height: 100%;
     width: 100%;
+}
+
+.btn-ganimation {
+    background: var(--color-gmain);
+    color: var(--color-gtext-bright);
+    transition: 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.btn-ganimation:hover {
+    background: var(--color-gsecondary);
+    color: var(--color-gtext-dark);
+}
+
+.mrg-l-1{
+    margin-left: 2rem;
 }

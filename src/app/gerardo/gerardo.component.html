@@ -1,4 +1,53 @@
 <div class="page-content"> 
-    <p>Hola amigos :D Este es mi componente {{textoEjemplo}}</p>
+    <input type="text" class="gtext-input" (input)="onInput($event.target.value)">
+    <p>{{resultadoPal1}}</p>
+
+    <input type="text" class="gtext-input" [(ngModel)]="inputPal2">
+    <button class="main-btn btn-small" (click)="checkPal2()">Revisar</button>
+    <p>{{resultadoPal2}}</p>
+
+    <hr/>
+    <form [formGroup]="regPersonaForm" (ngSubmit)="submitRegPersona(regPersonaForm.value)">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" formControlName="nombre">
+        </div>
+        <div>
+            <label>Apellidos:</label>
+            <input type="text" formControlName="apellidos">
+        </div>
+        <div>
+            <label>Edad:</label>
+            <input type="number" formControlName="edad">
+        </div>
+        <div>
+            <label>Ciudad:</label>
+            <input type="text" formControlName="ciudad">
+        </div>
+        <div>
+            <label>Sexo:</label>
+            <div class="mrg-l-1">
+                <label>Hombre:</label>
+                <input type="radio" value="hombre" formControlName="sexo">
+                <label>Mujer:</label>
+                <input type="radio" value="mujer" formControlName="sexo">
+                <label>Otro:</label>
+                <input type="radio" value="otro" formControlName="sexo">
+            </div>
+        </div>
+        <button type="submit" class="main-btn btn-small">Saludar</button>
+    </form>
+    <p>{{saludoPersona}}</p>
+
+    <button class="main-btn btn-ganimation" (mousedown)="btnPressed()" (mouseup)="btnReleased()" (mouseleave)="btnReleased()">
+        Mostrar SVG
+    </button>
+    <svg *ngIf="showSVG" xmlns="http://www.w3.org/2000/svg" heiht="3rem" width="3rem" viewBox="0 0 24 24"><path d="M12 0l-11 6v12.131l11 5.869 11-5.869v-12.066l-11-6.065zm-.005 2.281l7.915 4.365-2.201 1.148-5.709-3.107-5.666 3.084-2.201-1.201 7.862-4.289zm.012 14.809l-3.821-2.024 3.814-2.014 3.739 2.089-3.732 1.949zm-5.007-7.404l4-2.177v3.808l-4 2.116v-3.747zm6 1.637v-3.815l4 2.177v3.866l-4-2.228zm-10 5.609v-8.702l2 1.091v6.321l6 3.178v2.38l-8-4.268zm18 0l-8 4.268v-2.372l6-3.132v-6.322l2-1.042v8.6z"/></svg>
+
+    <select [(ngModel)]="numberSelected" (change)="onChange($event.target.value)">
+        <option *ngFor="let i of numberOptions" value="{{i}}">{{i}}</option>
+    </select>
+
+    <svg *ngFor="let a of amountArray" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18.5 21.05c.715 0 1.5.566 1.5 1.5 0 .715-.566 1.5-1.5 1.5h-14c-.929 0-1.5-.776-1.5-1.5 0-.72.573-1.5 1.5-1.5h14zm-.089-1h-13.895c-1.749-5.978 7.02-8.2 4.672-10.431-1.366-1.298-2.838 1.544-4.771.914-1.313-.427-1.985-2.881-.715-3.483 2.357-1.118 2.076-3.365 3.113-4.153 1.167-.886 2.347.211 3.108-.383.48-.376-.015-1.416-.773-2.464 5.541.565 8.469 3.854 9.459 7h-1.756c-.24 0-.5.189-.5.5 0 .239.189.5.5.5h2.007c.094.496.14.979.14 1.44l-.012.56h-1.841c-.31 0-.5.26-.5.5 0 .239.19.5.5.5h1.76c-.092.747-.243 1.406-.419 2h-1.988c-.311 0-.5.26-.5.5 0 .239.189.5.5.5h1.651c-.879 2.364-1.852 3.669.26 6zm-10.175-16c.422 0 .764.307.764.684 0 .378-.342.684-.764.684-.421 0-.763-.306-.763-.684 0-.377.342-.684.763-.684z"/></svg>
 </div>
     
