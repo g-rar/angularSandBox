@@ -8,27 +8,35 @@
                 <form [formGroup]="inputForm" (ngSubmit)="registerAnUserFromForm(inputForm.value)" class="card-body">
                     <label>Ingrese el nombre:</label>
                     <div class="form-group">
-                        <input formControl="nameInputForm" type="text" class="form-control">
+                        <input formControlName="nameInputForm" type="text" class="form-control">
                     </div>
                     <label>Ingrese el apellido:</label>
                     <div class="form-group">
-                        <input formControl="lasNameInputForm" type="text" class="form-control">
+                        <input formControlName="lastNameInputForm" type="text" class="form-control">
                     </div>
                     <label>Ingrese el número celular:</label>
                     <div class="form-group">
-                        <input formControl="cellphoneInputForm" type="text" class="form-control">
+                        <input formControlName="cellphoneInputForm" type="text" class="form-control">
                     </div><label>Ingrese el correo:</label>
                     <div class="form-group">
-                        <input formControl="emailInputForm" type="text" class="form-control">
+                        <input formControlName="emailInputForm" type="text" class="form-control">
                     </div><label>Ingrese el carnet:</label>
                     <div class="form-group">
-                        <input formControl="carnetInputForm" type="text" class="form-control">
+                        <input formControlName="carnetInputForm" type="text" class="form-control">
                     </div>
                     <button class="main-btn btn-small" type="submit">REGISTRAR</button>
                 </form>
             </div>
-            <div class="col-md-8" id="lista">
-
+        </div>
+        <div class="col-md-6" id="lista" *ngFor="let item of students">
+            <div class="card text-center mb-4">
+                <div class="card-body">
+                    <strong class="col-md-2">Nombre: </strong> {{item.nombre}}
+                    <strong class="col-md-4">apellido: </strong> {{item.apellido}}
+                    <strong class="col-md-6">telefono: </strong> {{item.telefono}}
+                    <strong class="col-md-8">email: </strong> {{item.email}}
+                    <strong class="col-md-10">carnet: </strong> {{item.carnet}}
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-walter',
@@ -9,13 +9,14 @@ import { FormBuilder } from '@angular/forms';
 export class WalterComponent implements OnInit {
 
   inputForm = {};
+  students = [];
 
   constructor(private formBuilder: FormBuilder) {
     this.inputForm = this.formBuilder.group({
       nameInputForm: '',
       lastNameInputForm: '',
       cellphoneInputForm: '',
-      emailInputFrom: '',
+      emailInputForm: '',
       carnetInputForm: ''
     });
   }
@@ -23,14 +24,15 @@ export class WalterComponent implements OnInit {
   ngOnInit() {
   }
 
-  registerAnUserFromForm(value){
-    let name = value.nameInputForm;
-    let lastName = value.lastNameInputForm;
-    let cellphone = value.cellphoneInputForm;
-    let email = value.emailInputFrom;
-    let carnet = value.carnetInputForm;
+  registerAnUserFromForm(value) {
+    const name = value.nameInputForm;
+    const lastName = value.lastNameInputForm;
+    const cellphone = value.cellphoneInputForm;
+    const email = value.emailInputFrom;
+    const carnet = value.carnetInputForm;
 
-    let estudiante = new Estudiante(name, lastName, cellphone, email, carnet);
+    const student = new Estudiante(name, lastName, cellphone, email, carnet);
+    this.students.push(student);
   }
 }
 
@@ -40,7 +42,7 @@ class Estudiante {
   telefono: string;
   email: string;
   carnet: string;
-  constructor(pNombre: string, pApellido: string, pTelefono: string, pEmail: string, pCarnet: string){
+  constructor(pNombre: string, pApellido: string, pTelefono: string, pEmail: string, pCarnet: string) {
     this.nombre = pNombre;
     this.apellido = pApellido;
     this.telefono = pTelefono;
