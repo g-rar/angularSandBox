@@ -1,3 +1,35 @@
-<div>
-    <p>walter works!</p>
+<div class="page-content">
+    <div class="row pt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>REGISTRAR USUARIO</h4>
+                </div>
+                <form [formGroup]="inputForm" (ngSubmit)="registerAnUserFromForm(inputForm.value)" class="card-body">
+                    <label>Ingrese el nombre:</label>
+                    <div class="form-group">
+                        <input formControl="nameInputForm" type="text" class="form-control">
+                    </div>
+                    <label>Ingrese el apellido:</label>
+                    <div class="form-group">
+                        <input formControl="lasNameInputForm" type="text" class="form-control">
+                    </div>
+                    <label>Ingrese el número celular:</label>
+                    <div class="form-group">
+                        <input formControl="cellphoneInputForm" type="text" class="form-control">
+                    </div><label>Ingrese el correo:</label>
+                    <div class="form-group">
+                        <input formControl="emailInputForm" type="text" class="form-control">
+                    </div><label>Ingrese el carnet:</label>
+                    <div class="form-group">
+                        <input formControl="carnetInputForm" type="text" class="form-control">
+                    </div>
+                    <button class="main-btn btn-small" type="submit">REGISTRAR</button>
+                </form>
+            </div>
+            <div class="col-md-8" id="lista">
+
+            </div>
+        </div>
+    </div>
 </div>
