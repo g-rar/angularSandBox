@@ -1,5 +1,4 @@
-
-<div class = "page-background">
+<div class = "page-background"></div>
 <div class="page-tittle" style="text-align: center;">
     <h1 style="color: white;">GabyGV</h1>
 </div>
@@ -13,7 +12,7 @@
             Creado: 5/13/2020
         </li>
         <li>
-            Última modificación: 5/13/2020 - 4:30pm 
+            Última modificación: 5/13/2020 - 8:30pm 
         </li>
     </ul>
 
@@ -24,24 +23,33 @@
 
 <div class="page-content">
     <h1 style="color: #3bd4d4;">Palíndromo</h1>
-    <input type="text" [value]="inputValue"/>
-    <button onclick="onInput($event.target.value)">Verificar</button>
-    <p>{{resultado}}</p>
+    <input type="text" [(ngModel)]="inputValue"/>
+    <button (click)="onInput()">Verificar</button>{{resultado}}
 
 </div>
 
 <div class="page-content">
     <h1 style="color: #3bd4d4;">Formulario</h1>
-    <form [formGroup]="exampleForm" (ngSubmit)="submitExampleForm(exampleForm.value)">
-        <label>Primer campo del form:</label>
-        <input formControlName="primerCampoDelForm" type="text">
-        <label>Segundo campo del form:</label>
-        <input formControlName="segundoCampoDelForm" type="text">
+    <form [formGroup]="registrationForm" (ngSubmit)="submitRegistrationForm(registrationForm.value)" id="registration">
+        <label>Nombre:</label>
+        <input formControlName="nombre" type="text">
+        <br>
+        <label>Apellido:</label>
+        <input formControlName="apellido" type="text">
+        <br>
+        <label>Genero:</label>
+        <select form="registrationForm" id="gen">
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+            <option value="Ninguno">Ninguno</option>
+        </select>
+        <br><br>
         <button class="main-btn btn-small" type="submit">Mostrar campos</button>
     </form>
-    <p>Campo1: {{campo1}}</p>
-    <p>Campo2: {{campo2}}</p>
+    <p>Campo1: {{nombre}}</p>
+    <p>Campo2: {{apellido}}</p>
+    <p>Genero: {{genero}}</p>
     
 </div>
 <br>
-</div>

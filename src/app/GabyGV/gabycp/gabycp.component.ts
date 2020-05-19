@@ -9,23 +9,27 @@ import { FormBuilder } from '@angular/forms';
 export class GabycpComponent implements OnInit {
   resultado = "Lo introducido no es un palíndromo";  //en el html se accesa aqui con {{resultado}}
   inputValue = "Hola Mundo";
-  exampleForm = {};
-  campo1 = "";
-  campo2 = "";
+  registrationForm = {};
+  nombre = "";
+  apellido = "";
+  genero = "Hombre";
 
   constructor(private formBuilder:FormBuilder) {
-    this.exampleForm = this.formBuilder.group({
-      primerCampoDelForm: "",
-      segundoCampoDelForm: ""
+    this.registrationForm = this.formBuilder.group({
+      nombre: "",
+      apellido: "",
+      genero: "Hombre"
     })
    }
 
   ngOnInit() {
   }
 
-  onInput(value: string){
+  onInput(){
     //     La idea es cambiar la propiedad resultado. Los cambio a esa propiedad
     //     Se veran reflejados automáticamente en el html
+    let value = this.inputValue;
+    
     if(this.esPalindromo(value)){
       this.resultado = "Eso sí es un palídromo :D"
     } else {
@@ -45,9 +49,12 @@ export class GabycpComponent implements OnInit {
     return true;
   }
   
-  submitExampleForm(value){
-    this.campo1 = value.primerCampoDelForm
-    this.campo2 = value.segundoCampoDelForm
+  submitRegistrationForm(value){
+    this.nombre = value.nombre
+    this.apellido = value.apellido
+    console.log(value.selected);
+    
+    this.genero = value.gen
   }
 
 }
