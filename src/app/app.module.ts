@@ -10,7 +10,11 @@ import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { ValeriaComponent } from './valeria/valeria.component';
+
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+
+import { NataliaComponent } from './natalia/natalia.component';
+
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 
     GerardoComponent,
     ValeriaComponent,
+
     CalculadoraComponent
+
+    NataliaComponent
+
   ],
   imports: [
     BrowserModule,
