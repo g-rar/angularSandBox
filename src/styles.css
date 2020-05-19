@@ -141,3 +141,5 @@ body {
 .text-alert {
     color: var(--color-alert);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
