@@ -10,6 +10,7 @@ import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { ValeriaComponent } from './valeria/valeria.component';
+import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ValeriaComponent } from './valeria/valeria.component';
     NotFoundComponent,
     ExampleComponent,
     GerardoComponent,
-    ValeriaComponent
+    ValeriaComponent,
+    GabycpComponent
   ],
   imports: [
     BrowserModule,
