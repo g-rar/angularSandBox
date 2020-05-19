@@ -10,9 +10,7 @@ import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { ValeriaComponent } from './valeria/valeria.component';
-
 import { CalculadoraComponent } from './calculadora/calculadora.component';
-
 import { NataliaComponent } from './natalia/natalia.component';
 
 
@@ -23,12 +21,9 @@ import { NataliaComponent } from './natalia/natalia.component';
     MainComponent,
     NotFoundComponent,
     ExampleComponent,
-
     GerardoComponent,
     ValeriaComponent,
-
-    CalculadoraComponent
-
+    CalculadoraComponent,
     NataliaComponent
 
   ],
