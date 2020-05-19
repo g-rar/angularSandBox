@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NataliaComponent implements OnInit {
 
-  constructor() { }
+  formulario = {};
+  num1 = "";
+  num2 = "";
+
+  constructor() { 
+  
+  }
 
   ngOnInit() {
   }

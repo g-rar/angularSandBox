@@ -1,24 +1,19 @@
+<div class="contenido">
+    <h1>Algunos campos de texto</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+        a type specimen book.
+    </p>
 
-<div class="example-container">
-
-    <mat-form-field appearance="fill">
-      <mat-label>Entrada</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Seleccione</mat-label>
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Text area</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-
-  </div> 
+    <h2>Form estilo Angular</h2>
+    <form [formGroup]="formulario" > <!--(ngSubmit)="submitExampleForm(exampleForm.value)"-->
+        <label>Digite primer número:</label>
+        <input formControlName="campo1" type="text">
+        <label>Digite segundo número:</label>
+        <input formControlName="campo2" type="text">
+        <button class="main-btn btn-small" type="submit">Sumar</button>
+    </form>
+   
 
 
-<h1>HOLAAAA</h1>
+</div>
