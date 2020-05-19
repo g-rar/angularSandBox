@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +122,11 @@
           }
         }
       }
-    }},
-  "defaultProject": "comSandBox"
+    }
+  },
+  "defaultProject": "comSandBox",
+  "cli": {
+    "analytics": false,
+    "analytics": "a2425994-f62e-4117-a757-3da83912f28c"
+  }
 }
