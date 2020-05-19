@@ -126,6 +126,7 @@
   },
   "defaultProject": "comSandBox",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "analytics": "a2425994-f62e-4117-a757-3da83912f28c"
   }
 }

@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { ValeriaComponent } from './valeria/valeria.component';
 import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
+import { NataliaComponent } from './natalia/natalia.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
     ExampleComponent,
     GerardoComponent,
     ValeriaComponent,
-    GabycpComponent
+    GabycpComponent,
+    NataliaComponent
   ],
   imports: [
     BrowserModule,
