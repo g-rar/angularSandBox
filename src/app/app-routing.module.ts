@@ -4,14 +4,16 @@ import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ExampleComponent } from './example/example.component';
 import { GerardoComponent } from './gerardo/gerardo.component';
+import {CalculadoraComponent} from'./calculadora/calculadora.component';
 
-import { ValeriaComponent } from './valeria/valeria.component';
+
 
 const routes: Routes = [
   {path: '', component:MainComponent},
   {path: 'example', component:ExampleComponent},
+
   {path: 'gerardo', component:GerardoComponent},
-  {path: 'valeria', component:ValeriaComponent},
+  {path: 'calculadora', component:CalculadoraComponent},
   {path: '**', component:NotFoundComponent}
 ];
 
