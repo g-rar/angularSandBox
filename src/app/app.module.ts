@@ -10,7 +10,6 @@ import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ValeriaComponent } from './valeria/valeria.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
