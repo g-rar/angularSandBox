@@ -6,13 +6,16 @@ import { ExampleComponent } from './example/example.component';
 import { GerardoComponent } from './gerardo/gerardo.component';
 
 import { ValeriaComponent } from './valeria/valeria.component';
+import { NataliaComponent } from './natalia/natalia.component';
 
 const routes: Routes = [
   {path: '', component:MainComponent},
   {path: 'example', component:ExampleComponent},
   {path: 'gerardo', component:GerardoComponent},
   {path: 'valeria', component:ValeriaComponent},
+  {path: 'natalia', component:NataliaComponent},
   {path: '**', component:NotFoundComponent}
+  
 ];
 
 @NgModule({
