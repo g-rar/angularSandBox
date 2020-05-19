@@ -6,18 +6,22 @@ import { ExampleComponent } from './example/example.component';
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
 
+import {CalculadoraComponent} from'./calculadora/calculadora.component'
 import { ValeriaComponent } from './valeria/valeria.component';
 import { NataliaComponent } from './natalia/natalia.component';
 
 const routes: Routes = [
   {path: '', component:MainComponent},
   {path: 'example', component:ExampleComponent},
+
   {path: 'gerardo', component:GerardoComponent},
+
+  {path: 'calculadora', component:CalculadoraComponent},
   {path: 'valeria', component:ValeriaComponent},
   {path: 'pato', component:GabycpComponent},
   {path: 'natalia', component:NataliaComponent},
   {path: '**', component:NotFoundComponent}
-  
+
 ];
 
 @NgModule({
