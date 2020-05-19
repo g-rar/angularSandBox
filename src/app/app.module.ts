@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExampleComponent } from './example/example.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { GerardoComponent } from './gerardo/gerardo.component';
+import { ValeriaComponent } from './valeria/valeria.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { GerardoComponent } from './gerardo/gerardo.component';
     MainComponent,
     NotFoundComponent,
     ExampleComponent,
-    GerardoComponent
+    GerardoComponent,
+    ValeriaComponent
   ],
   imports: [
     BrowserModule,
