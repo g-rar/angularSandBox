@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { stringify } from 'querystring';
-import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-gerardo',
@@ -20,7 +19,7 @@ export class GerardoComponent implements OnInit {
   numberSelected = 0;
   amountArray = [];
 
-  constructor(private formBuilder :FormBuilder, private util:UtilService) {
+  constructor(private formBuilder :FormBuilder) {
     this.regPersonaForm = formBuilder.group({
       nombre:"",
       apellidos:"",
@@ -34,11 +33,11 @@ export class GerardoComponent implements OnInit {
   }
 
   onInput(inputValue){
-    this.resultadoPal1 = this.util.esPalindromo(inputValue) ? "Eso sí es un palíndromo :D" : "Eso no es un palindromo.";
+    this.resultadoPal1 = this.esPalindromo(inputValue) ? "Eso sí es un palíndromo :D" : "Eso no es un palindromo.";
   }
 
   checkPal2(){
-    this.resultadoPal2 = this.util.esPalindromo(this.inputPal2) ? "Eso sí es un palíndromo :D" : "Eso no es un palindromo.";
+    this.resultadoPal2 = this.esPalindromo(this.inputPal2) ? "Eso sí es un palíndromo :D" : "Eso no es un palindromo.";
   }
 
   submitRegPersona(formData){
@@ -68,4 +67,16 @@ export class GerardoComponent implements OnInit {
       this.amountArray.push(i)
     }
   }
+
+  private esPalindromo(value: string):boolean {
+    value = value.trim().toLowerCase(); // <---- Remueve espacios al final y al principio y lo pasa a minuscula
+    let valLength = value.length; // <----  la longitud de un string o array es una propiedad, no un metodo
+    for (let i = 0; i < Math.floor(value.length/2) ; i++) {
+      if(value[i] !== value[value.length-1-i]){
+        return false;
+      }
+    }
+    return true;
+  }
+  
 }

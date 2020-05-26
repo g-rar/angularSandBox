@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-example',
@@ -21,7 +20,7 @@ export class ExampleComponent implements OnInit {
 
   //      En el metodo constructor se pasan como parametros los módulos y servicios que se va
   //      a necesitar. Por ahora no necesitamos mas que los forms.
-  constructor(private formBuilder:FormBuilder, private util:UtilService) {
+  constructor(private formBuilder:FormBuilder) {
     //      vamos a usar el constructor para definir los campos del form
     this.exampleForm = this.formBuilder.group({
       primerCampoDelForm: "",
@@ -36,11 +35,24 @@ export class ExampleComponent implements OnInit {
   onInput(value: string){
     //     La idea es cambiar la propiedad resultado. Los cambio a esa propiedad
     //     Se veran reflejados automáticamente en el html
-    if(this.util.esPalindromo(value)){
+    if(this.esPalindromo(value)){
       this.resultado = "<p>Eso sí es un palídromo :D</p>"
     } else {
       this.resultado = "<p>Lo introducido no es un palíndromo</p>";
     }
+  }
+
+  //     Se debería hacer un servicio para funciones no especificas del componente
+  //     este metodo retorna un booleano y es privado
+  private esPalindromo(value: string):boolean {
+    value = value.trim(); // <---- Remueve espacios al final y al principio
+    let valLength = value.length; // <----  la longitud de un string o array es una propiedad, no un metodo
+    for (let i = 0; i < Math.floor(value.length/2) ; i++) {
+      if(value[i] !== value[value.length-1-i]){
+        return false;
+      }
+    }
+    return true;
   }
   
   submitExampleForm(value){
