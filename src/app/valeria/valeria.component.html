@@ -7,9 +7,9 @@
     <button *ngIf = "isCollapsed" (click)="buttonCollapse()">Ver calculadora</button>
     <button *ngIf = "!isCollapsed" (click)="buttonCollapse()">Ocultar calculadora</button>
     <div *ngIf = "!isCollapsed">
-        <h1 class="subT">Primera practica: Calculadora</h1>
-        <button mat-button color="primary">
-            1
-        </button>
+        <h1 class="subT">Primera practica: Botones</h1>
+        <label class = "btn-primary" ngbButtonLabel>
+            <p matBadge="4" matBadgeOverlap="false">Text with a badge</p>
+        </label>
     </div>
 </div>

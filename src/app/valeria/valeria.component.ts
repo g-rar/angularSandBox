@@ -10,6 +10,8 @@ export class ValeriaComponent implements OnInit {
   tittles: "Practica de mis Componentes";
   isCollapsed:boolean = true;
   inputText:string = "";
+  longCalculator: string[] = ['AC','CE'];
+  buttonsCalculator: string[] = ['7','8','9','/','4','5','6','*','1','2','3','-','.','0','=','+'];
 
   constructor() {
   }
