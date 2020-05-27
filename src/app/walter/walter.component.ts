@@ -28,7 +28,7 @@ export class WalterComponent implements OnInit {
     const name = value.nameInputForm;
     const lastName = value.lastNameInputForm;
     const cellphone = value.cellphoneInputForm;
-    const email = value.emailInputFrom;
+    const email = value.emailInputForm;
     const carnet = value.carnetInputForm;
 
     const student = new Estudiante(name, lastName, cellphone, email, carnet);
@@ -46,7 +46,7 @@ class Estudiante {
     this.nombre = pNombre;
     this.apellido = pApellido;
     this.telefono = pTelefono;
-    this.email = pTelefono;
+    this.email = pEmail;
     this.carnet = pCarnet;
   }
 }
