@@ -28,14 +28,15 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-6" id="lista" *ngFor="let item of students">
-            <div class="card text-center mb-4">
+        <div class="col-md-6" id="lista">
+            <div class="card text-center mb-4" *ngFor="let item of students">
                 <div class="card-body">
                     <strong class="col-md-2">Nombre: </strong> {{item.nombre}}
                     <strong class="col-md-4">apellido: </strong> {{item.apellido}}
                     <strong class="col-md-6">telefono: </strong> {{item.telefono}}
                     <strong class="col-md-8">email: </strong> {{item.email}}
                     <strong class="col-md-10">carnet: </strong> {{item.carnet}}
+                    <hr/>
                 </div>
             </div>
         </div>
