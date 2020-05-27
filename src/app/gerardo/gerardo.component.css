@@ -5,11 +5,11 @@
     --color-gtext-dark: #292929;
 }
 
-.page-background {
+/*.page-background {
     z-index: -1;
     height: 100%;
     width: 100%;
-}
+}*/
 
 .btn-ganimation {
     background: var(--color-gmain);

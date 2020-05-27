@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -13,6 +12,7 @@ import { ValeriaComponent } from './valeria/valeria.component';
 import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { NataliaComponent } from './natalia/natalia.component';
+import { from } from 'rxjs';
 
 
 

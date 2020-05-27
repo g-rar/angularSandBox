@@ -1,19 +1,47 @@
 <div class="contenido">
-    <h1>Algunos campos de texto</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
-        a type specimen book.
-    </p>
+    <div class="barrita">
+        <h4>Convertidor de bases</h4>
+        <hr>
 
+    </div>
+
+    <div class="texto">
+
+        <p class="Parrafo">Puedes realizar conversiones de base 10 a otras bases de diferentes sistemas numéricos.</p>
+        <div class="form">
+
+            <form [formGroup]="formulario" (ngSubmit)="convertir(formulario.value)">
+                <div class="txt">
+                    <label>Digite el número decimal: </label>
+                    <input formControlName="campo1" type="number">  
+                </div>
+                <div class="txt">
+                    <label>El número en base: </label>
+                    <input formControlName="campo2" type="number">
+                </div>
+                <div class="txt">
+                    <button type="submit" (click)="convertir()">Sumar</button>
+                </div>
+                
+            </form>
+            <div class="txt">
+                <label>Está satisfecho con la respuesta?</label>
+                <div class="radiobuttons">
+                    <label>Sí</label>
+                    <input type="radio" value="sip" formControlName="satisfecho">
+                    <label>No</label>
+                    <input type="radio" value="nop" formControlName="satisfecho">
+                    <button class="botonRadios" (click)="MostrarMsj">Enviar</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     
-    <form [formGroup]="formulario" > <!--(ngSubmit)="submitExampleForm(exampleForm.value)"-->
-        <label>Digite primer número:</label>
-        <input formControlName="campo1" type="text">
-        <label>Digite segundo número:</label>
-        <input formControlName="campo2" type="text">
-        <button class="main-btn btn-small" type="submit">Sumar</button>
-    </form>
+
    
 
 
 </div>
+
+
