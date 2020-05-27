@@ -13,7 +13,7 @@ import { ValeriaComponent } from './valeria/valeria.component';
 import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { NataliaComponent } from './natalia/natalia.component';
-
+import { WalterComponent } from './walter/walter.component';
 
 
 @NgModule({
@@ -26,8 +26,8 @@ import { NataliaComponent } from './natalia/natalia.component';
     ValeriaComponent,
     GabycpComponent,
     CalculadoraComponent,
-    NataliaComponent
-
+    NataliaComponent,
+    WalterComponent
   ],
   imports: [
     BrowserModule,
