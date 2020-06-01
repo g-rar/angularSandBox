@@ -5,8 +5,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ExampleComponent } from './example/example.component';
 import { GerardoComponent } from './gerardo/gerardo.component';
 import { GabycpComponent } from './GabyGV/gabycp/gabycp.component';
+import { WalterComponent } from './walter/walter.component';
 
-import {CalculadoraComponent} from'./calculadora/calculadora.component'
+import {CalculadoraComponent} from './calculadora/calculadora.component';
 import { ValeriaComponent } from './valeria/valeria.component';
 import { NataliaComponent } from './natalia/natalia.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'valeria', component:ValeriaComponent},
   {path: 'pato', component:GabycpComponent},
   {path: 'natalia', component:NataliaComponent},
+  {path: 'walter', component:WalterComponent},
   {path: '**', component:NotFoundComponent}
 
 ];

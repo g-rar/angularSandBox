@@ -14,6 +14,7 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { NataliaComponent } from './natalia/natalia.component';
 import { from } from 'rxjs';
 
+import { WalterComponent } from './walter/walter.component';
 
 
 @NgModule({
@@ -26,8 +27,8 @@ import { from } from 'rxjs';
     ValeriaComponent,
     GabycpComponent,
     CalculadoraComponent,
-    NataliaComponent
-
+    NataliaComponent,
+    WalterComponent
   ],
   imports: [
     BrowserModule,
