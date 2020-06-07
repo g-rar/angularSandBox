@@ -45,3 +45,10 @@ h4 {
 }
 
 
+.texto .imagensvg{
+    padding:20px;
+    text-align: right;
+    position: absolute;
+    display: inline-block;
+    z-index: 0;
+}
