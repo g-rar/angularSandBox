@@ -8,13 +8,13 @@ import { FormBuilder } from '@angular/forms';
 })
 export class NataliaComponent implements OnInit {
 
-  formulario;
+  formulario = {};
   num1 = 0;
   num2 = 0;
   mensajito = "Mensajito para el usuario";
 
   constructor(private formBuilder :FormBuilder) { 
-    this.formulario = formBuilder.group({
+    this.formulario = this.formBuilder.group({
      campo1:0,
      campo2:0
      
@@ -24,6 +24,10 @@ export class NataliaComponent implements OnInit {
   ngOnInit() {
   }
   
+  convertir(value){
+    
+  }
+
   /*MostrarMs(){
 
     if (=== "sip"){

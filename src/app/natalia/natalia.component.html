@@ -20,18 +20,20 @@
                     <input formControlName="campo2" type="number">
                 </div>
                 <div class="txt">
-                    <button type="submit" (click)="convertir()">Sumar</button>
+                    <button class= "button-class" type="submit">CONVERTIR</button>
                 </div>
+
                 
             </form>
             <div class="txt">
-                <label>Está satisfecho con la respuesta?</label>
+                <label><h6>Está satisfecho con la respuesta?</h6></label>
                 <div class="radiobuttons">
                     <label>Sí</label>
                     <input type="radio" value="sip" formControlName="satisfecho">
                     <label>No</label>
                     <input type="radio" value="nop" formControlName="satisfecho">
-                    <button class="botonRadios" (click)="MostrarMsj">Enviar</button>
+                    <br>
+                    <button class="botonRadios" (click)="MostrarMsj">ENVIAR</button>
                 </div>
             </div>
             
